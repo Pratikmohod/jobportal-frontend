@@ -1,0 +1,324 @@
+/* ==========================
+   PAGE CONTAINER
+========================== */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 100px auto 40px;
+  padding: 1rem;
+
+  min-height: 100vh;
+
+  background: #f8fafc;
+
+  box-sizing: border-box;
+}
+
+/* ==========================
+   PAGE TITLE
+========================== */
+
+.title {
+  text-align: center;
+
+  margin-bottom: 2rem;
+
+  color: #1e293b;
+
+  font-size: clamp(1.7rem, 4vw, 2rem);
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  word-break: break-word;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill,
+      minmax(290px, 1fr));
+
+  gap: 1rem;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 24px rgba(37, 99, 235, 0.12);
+}
+
+/* ==========================
+   APPLICANT NAME
+========================== */
+
+.card h2 {
+  margin-bottom: 12px;
+
+  color: #0a66c2;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+/* ==========================
+   INFO
+========================== */
+
+.info {
+  flex-grow: 1;
+}
+
+.info p {
+  margin: 8px 0;
+
+  color: #475569;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  overflow-wrap: break-word;
+}
+
+.info strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* ==========================
+   STATUS BADGE
+========================== */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+
+  margin-left: 8px;
+
+  padding: 5px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+
+  white-space: nowrap;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ==========================
+   BUTTON GROUP
+========================== */
+
+.buttonGroup {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+
+
+/* =====================
+Resume button
+=================== */
+
+.resumeBtn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #2563eb;
+  color: white;
+  transition: 0.2s;
+}
+
+.resumeBtn:hover {
+  opacity: 0.9;
+}
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.acceptBtn,
+.rejectBtn {
+  flex: 1;
+
+  height: 42px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.acceptBtn {
+  background: linear-gradient(135deg,
+      #16a34a,
+      #22c55e);
+}
+
+.rejectBtn {
+  background: linear-gradient(135deg,
+      #dc2626,
+      #ef4444);
+}
+
+.acceptBtn:hover,
+.rejectBtn:hover {
+  transform: translateY(-2px);
+}
+
+.acceptBtn:active,
+.rejectBtn:active {
+  transform: scale(0.98);
+}
+
+.acceptBtn:disabled,
+.rejectBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.9rem;
+  }
+
+  .title {
+    margin-bottom: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill,
+        minmax(260px, 1fr));
+  }
+
+  .card {
+    padding: 0.9rem;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .container {
+    margin: 85px auto 25px;
+    padding: 0.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 0.85rem;
+
+    border-radius: 12px;
+  }
+
+  .card h2 {
+    font-size: 0.95rem;
+  }
+
+  .info p {
+    font-size: 13px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .acceptBtn,
+  .rejectBtn {
+    width: 100%;
+
+    height: 40px;
+
+    font-size: 13px;
+  }
+
+  .status {
+    font-size: 11px;
+
+    padding: 4px 10px;
+  }
+}

@@ -1,0 +1,218 @@
+/* ==========================
+   PAGE HEADER
+========================== */
+
+.pageHeader {
+  text-align: center;
+  margin: 100px 0 30px;
+  padding: 0 20px;
+}
+
+.pageHeader h2 {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: #0a66c2;
+
+  margin-bottom: 8px;
+}
+
+.pageHeader p {
+  font-size: 1rem;
+  color: #6b7280;
+
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================
+   COMPANIES GRID
+========================== */
+
+.companies {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px, 1fr)
+  );
+
+  gap: 24px;
+
+  background: #f8fafc;
+
+  box-sizing: border-box;
+}
+
+/* ==========================
+   COMPANY CARD
+========================== */
+
+.companyCard {
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  min-height: 260px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.companyCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo {
+  flex-shrink: 0;
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #0a66c2;
+
+  color: white;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ==========================
+   COMPANY NAME
+========================== */
+
+.companyCard h3 {
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.companyCard button {
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background: #0a66c2;
+
+  color: white;
+
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.companyCard button:hover {
+  background: #084b8a;
+  transform: translateY(-2px);
+}
+
+.companyCard button:active {
+  transform: scale(0.98);
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .pageHeader {
+    margin-top: 90px;
+  }
+
+  .companies {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .companyCard {
+    padding: 20px;
+    min-height: 240px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .pageHeader {
+    margin-top: 85px;
+    margin-bottom: 25px;
+  }
+
+  .companies {
+    padding: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .companyCard {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+
+    font-size: 24px;
+  }
+
+  .companyCard h3 {
+    font-size: 1rem;
+  }
+
+  .companyCard button {
+    width: 100%;
+  }
+}

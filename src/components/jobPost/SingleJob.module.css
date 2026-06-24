@@ -1,0 +1,163 @@
+.job {
+  max-width: 800px;
+  width: min(90%, 800px);
+
+  margin: 96px auto 40px;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  overflow-wrap: break-word;
+}
+
+.job:hover {
+  transform: translateY(-3px);
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #111827;
+
+  margin: 0;
+  line-height: 1.2;
+}
+
+.company {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: #0f766e;
+
+  margin: 0;
+}
+
+.job p {
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: #374151;
+
+  word-break: break-word;
+}
+
+.job p strong {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.description {
+  padding: 16px;
+
+  background: #f8fafc;
+
+  border-radius: 10px;
+
+  border-left: 5px solid #14b8a6;
+
+  line-height: 1.8;
+}
+
+.job button {
+  margin-top: 10px;
+
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #0f766e,
+    #14b8a6
+  );
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.job button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(20, 184, 166, 0.35);
+}
+
+.job button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.job button:disabled {
+  background: #bdbdbd;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .job {
+    width: 92%;
+    padding: 24px;
+
+    margin-top: 90px;
+  }
+
+  .job {
+    gap: 15px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .job {
+    width: 95%;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    margin-top: 85px;
+  }
+
+  .description {
+    padding: 12px;
+  }
+
+  .job button {
+    width: 100%;
+
+    padding: 13px;
+
+    font-size: 0.95rem;
+  }
+
+  .job p {
+    font-size: 0.95rem;
+  }
+}

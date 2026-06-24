@@ -1,0 +1,181 @@
+.container {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 20px 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 900px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  padding: 40px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.heading {
+  text-align: center;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  margin-bottom: 35px;
+
+  color: #111827;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+.buttonContainer {
+  grid-column: 1 / -1;
+
+  margin-top: 10px;
+}
+
+.button {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 14px 20px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #1d4ed8;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.message {
+  text-align: center;
+  margin-top: 120px;
+}
+
+
+/* LABLE AND INPUT */
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: capitalize;
+}
+
+.input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+
+  font-size: 0.95rem;
+
+  transition: all 0.25s ease;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:hover {
+  border-color: #9ca3af;
+}
+
+.input:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 90px 16px 30px;
+  }
+
+  .card {
+    padding: 30px 24px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 80px 12px 20px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .button {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}

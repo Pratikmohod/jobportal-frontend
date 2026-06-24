@@ -1,0 +1,112 @@
+/* ==========================
+   PAGE HEADER
+========================== */
+
+.page-header {
+  text-align: center;
+
+  margin: 100px 0 35px;
+  padding: 0 20px;
+}
+
+.page-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2rem);
+  font-weight: 800;
+
+  color: #111827;
+
+  line-height: 1.2;
+
+  word-break: break-word;
+}
+
+.page-header p {
+  margin-top: 8px;
+
+  color: #6b7280;
+
+  font-size: 1rem;
+  line-height: 1.6;
+
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================
+   PAGINATION
+========================== */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.page-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.active-page {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  font-weight: 700;
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .page-header {
+    margin: 90px 0 30px;
+  }
+
+  .pagination {
+    gap: 6px;
+  }
+
+  .page-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .page-header {
+    margin: 85px 0 25px;
+    padding: 0 15px;
+  }
+
+  .page-header p {
+    font-size: 0.95rem;
+  }
+}

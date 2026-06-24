@@ -1,0 +1,225 @@
+/* ==========================
+   PAGE
+========================== */
+
+.page {
+  min-height: 100vh;
+
+  padding: 100px 20px 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: #f8fafc;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card {
+  width: 100%;
+  max-width: 900px;
+
+  background: #ffffff;
+
+  padding: 32px;
+
+  border-radius: 20px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.title {
+  text-align: center;
+
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+
+  color: #6b7280;
+
+  margin-bottom: 30px;
+
+  font-size: 1rem;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.form input,
+.form select,
+.textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form input:focus,
+.form select:focus,
+.textarea:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================
+   TEXTAREA
+========================== */
+
+.textarea {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.submitBtn {
+  width: min(300px, 100%);
+
+  margin: 10px auto 0;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+.submitBtn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .page {
+    padding: 85px 15px 30px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .page {
+    padding: 75px 12px 20px;
+  }
+
+  .card {
+    padding: 18px;
+
+    border-radius: 16px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form input,
+  .form select,
+  .textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .textarea {
+    min-height: 140px;
+  }
+
+  .submitBtn {
+    width: 100%;
+
+    padding: 14px;
+
+    font-size: 15px;
+  }
+}

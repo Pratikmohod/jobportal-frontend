@@ -1,0 +1,294 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   JOB LISTING CONTAINER
+========================== */
+
+.job-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 100px auto 40px;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+
+  gap: 25px;
+}
+
+/* ==========================
+   JOB CARD
+========================== */
+
+.job-card {
+  background: #ffffff;
+
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 320px;
+  height: 100%;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+   CARD HEADER
+========================== */
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.job-header h2 {
+  color: #222;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+/* ==========================
+   LOCATION BADGE
+========================== */
+
+.job-location {
+  flex-shrink: 0;
+
+  background: #e8f5e9;
+  color: #2e7d32;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* ==========================
+   JOB TITLE
+========================== */
+
+.job-title {
+  color: #1565c0;
+
+  margin-bottom: 15px;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+/* ==========================
+   JOB DETAILS
+========================== */
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.job-details p {
+  color: #555;
+
+  line-height: 1.6;
+
+  overflow-wrap: break-word;
+}
+
+.job-details strong {
+  color: #222;
+}
+
+/* ==========================
+   DESCRIPTION
+========================== */
+
+.job-description {
+  flex-grow: 1;
+
+  color: #666;
+
+  line-height: 1.7;
+
+  margin: 15px 0;
+
+  overflow-wrap: break-word;
+}
+
+.job-description a {
+  text-decoration: none;
+
+  color: #1565c0;
+
+  font-weight: 600;
+}
+
+.job-description a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+   APPLY BUTTON
+========================== */
+
+.apply-btn {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #0d6efd;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.apply-btn:hover {
+  background: #0b5ed7;
+}
+
+.apply-btn:active {
+  transform: scale(0.98);
+}
+
+.apply-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+  .job-container {
+    padding: 0 15px;
+
+    gap: 18px;
+  }
+
+  .job-card {
+    padding: 18px;
+  }
+
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .job-title {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .job-container {
+    padding: 0 12px;
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .job-card {
+    padding: 16px;
+
+    min-height: auto;
+
+    border-radius: 14px;
+  }
+
+  .job-header h2 {
+    font-size: 1rem;
+  }
+
+  .job-title {
+    font-size: 0.95rem;
+  }
+
+  .job-details p,
+  .job-description {
+    font-size: 0.9rem;
+  }
+
+  .job-location {
+    font-size: 0.75rem;
+
+    padding: 5px 10px;
+  }
+
+  .apply-btn {
+    padding: 11px;
+
+    font-size: 0.95rem;
+  }
+}
